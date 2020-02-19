@@ -27,9 +27,20 @@ function funciona(){
   let minutosGraus = minutes * 6;
   ponteiroMinutos.style.transform = "rotate(" + minutosGraus + "deg)";
   
-  let horasGraus = minutes;
+  let horasGraus = hoursDegrees(hours, minutes);
   ponteiroHoras.style.transform = "rotate(" + horasGraus + "deg)";
   
+};
+
+function hoursDegrees(hrs, min){
+  let newHr;
+  if(hrs >= 12){
+    newHr = (hrs-12) + (min/60)
+  }else{
+    newHr = hrs + (min/60);
+  }
+  let degrees = newHr * 30; //30º a cada hora
+  return degrees;
 };
 
 myTimer = setInterval(funciona, 1000);
