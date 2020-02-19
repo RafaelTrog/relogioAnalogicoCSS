@@ -1,0 +1,118 @@
+html, body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .sala {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .parede {
+    width: 100%;
+    height: 100%;
+    border-left: 60px solid rgb(214, 200, 163);
+    border-right: 60px solid rgb(214, 200, 163);
+    background: rgb(237, 225, 194);
+    margin: auto;
+  }
+  
+  .boxHoras {
+     position: absolute;
+     width: 80px;
+     height: 50px;
+     border-radius: 10px;
+     border: 1px solid black;
+     background: white;
+     font-size: 8pt;
+     line-height: 3px;
+     padding: 0 5px;
+     margin: 10px;
+     user-select: none;
+  }
+  
+  .chao {
+  border-bottom: 120px solid rgb(107, 88, 39);
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  height: 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  }
+  
+  .relogio {
+    width: 100px;
+    height: 100px;
+    background-image: url("https://i.ibb.co/ZMt3yk8/clock.png");
+    background-color: white;
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    border: 3px solid black;
+  }
+  
+  .ponteiroHoras {
+    width: 2px;
+    height: 25px;
+    position: absolute;
+    background: black;
+    top: 22.5px;
+    left: 46px;
+    transform-origin: 50% 100%;
+  }
+  
+  .ponteiroHoras:before {
+    content: '';
+    position: absolute;
+    width: 0; 
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 5px solid black;
+    bottom: 25px;
+    left: -3px;
+  }
+  
+  .ponteiroMinutos {
+    width: 2px;
+    height: 30px;
+    position: absolute;
+    background: black;
+    top: 18px;
+    left: 46px;
+    transform-origin: 50% 100%;
+  }
+  
+  .ponteiroMinutos:before {
+    content: '';
+    position: absolute;
+    width: 0; 
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 5px solid black;
+    bottom: 30px;
+    left: -3px;
+  }
+  
+  .ponteiroSegundos {
+    width: 1px;
+    height: 45px;
+    position: absolute;
+    background: red;
+    top: 12px;
+    left: 46px;
+    transform-origin: 50% 80%;
+    transition: transform 1s;
+    transition-timing-function: linear;
+  }
