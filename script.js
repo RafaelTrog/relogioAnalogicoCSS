@@ -27,7 +27,7 @@ function funciona(){
   let minutosGraus = minutes * 6;
   ponteiroMinutos.style.transform = "rotate(" + minutosGraus + "deg)";
   
-  let horasGraus = (hours/2) * 6;
+  let horasGraus = minutes;
   ponteiroHoras.style.transform = "rotate(" + horasGraus + "deg)";
   
 };
